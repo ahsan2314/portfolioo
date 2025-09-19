@@ -1,0 +1,60 @@
+/* Shared styles for cursor elements */
+.cursor-dot, .cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999;
+  will-change: transform, opacity;
+  transition: opacity 160ms ease;
+  opacity: 1;
+}
+
+/* Use CSS variables so JS only updates variables (fast) */
+.cursor-dot {
+  --x: 0px;
+  --y: 0px;
+  --scale: 1;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffffff, #00fff2 70%);
+  box-shadow: 0 0 18px rgba(0,255,242,0.35), 0 0 6px rgba(0,255,242,0.12);
+  transform: translate3d(var(--x), var(--y), 0) translate(-50%, -50%) scale(var(--scale));
+}
+
+/* Ring */
+.cursor-ring {
+  --x: 0px;
+  --y: 0px;
+  --scale: 1;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid rgba(0,255,242,0.9);
+  background: rgba(255,255,255,0.02);
+  transform: translate3d(var(--x), var(--y), 0) translate(-50%, -50%) scale(var(--scale));
+  transition: width 140ms ease, height 140ms ease, border-color 140ms ease, transform 160ms ease;
+}
+
+/* Hover state on interactive elements (applies to body) */
+body.cursor-hover .cursor-ring {
+  width: 64px;
+  height: 64px;
+  border-color: #ff00d4;
+}
+body.cursor-hover .cursor-dot {
+  --scale: 0.85;
+  box-shadow: 0 0 22px rgba(255,0,212,0.25);
+}
+
+/* Click (temporary) */
+body.cursor-click .cursor-ring {
+  --scale: 1.35;
+}
+
+/* Hide when mouse leaves window */
+.cursor-dot.hidden,
+.cursor-ring.hidden {
+  opacity: 0;
+}

@@ -1,0 +1,174 @@
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 12vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #081C29;
+    z-index: 10;
+    padding: 0 40px;
+}
+
+.logo {
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    animation: slideleft 1.5s forwards;
+    margin-left: 145px;
+}
+
+@keyframes slideleft {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    list-style: none;
+    color: white;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    display: inline-block;
+    animation: slideright 1.5s forwards;
+}
+
+.nav-links li a:hover {
+    color: #10a1df;
+}
+
+.nav-links span {
+    color: #01A4E9;
+}
+
+@keyframes slideright {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.hamburger {
+    display: none;
+    font-size: 35px;
+    cursor: pointer;
+    animation: slideleft 1.5s forwards;
+}
+.logo span{
+    color: #00A3E7;
+}
+/* Responsive Styles */
+@media (max-width: 1260px) {
+    .nav-links {
+        position: absolute;
+        top: 12vh;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #081C29;
+
+        display: none;
+        padding: 20px 0;
+        text-align: center;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        opacity: 0;
+        transform: translateY(-10px);
+        animation: slideIn 0.4s forwards;
+        animation-delay: 0.2s;
+    }
+
+    .hamburger {
+        display: block;
+        margin-left: 300px;
+    }
+}
+
+@media screen and (max-width:632px) {
+
+    .hamburger {
+        margin-right: 180px;
+    }
+
+    .logo {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .hamburger {
+        display: block;
+        margin-left: 150px !important;
+    }
+}
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .logo {
+        margin-left: 10px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+}
+
+
+@media screen and (max-width:400px) {
+
+    .hamburger{
+        display: block;
+        margin-left: 20px;
+    }
+    
+}
+@media screen and (max-width:377px) {
+    
+    .hamburger{
+        margin-right: 100px;
+    }
+}

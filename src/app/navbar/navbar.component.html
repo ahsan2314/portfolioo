@@ -1,0 +1,19 @@
+<div class="head">
+  <div class="logo">
+    <h1>Port<span>folio</span></h1>
+  </div>
+
+  <div class="hamburger" (click)="toggleMenu()">
+    ☰
+  </div>
+
+  <nav>
+    <ul class="nav-links" [ngClass]="{ 'active': isMenuOpen }">
+      <li><a routerLink="/" (click)="closeMenu()" class="active"><span>Home</span></a></li>
+      <li><a routerLink="/about-a" (click)="closeMenu()">About</a></li>
+      <li><a routerLink="/service-a" (click)="closeMenu()">Service</a></li>
+      <li><a routerLink="/project-a" (click)="closeMenu()">Project</a></li>
+      <li><a routerLink="/contact-a" (click)="closeMenu()">Contact</a></li>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,689 @@
+/*
+ * This CSS provides a complete, modern, and responsive style
+ * for your portfolio, with enhanced advanced image styling.
+ */
+
+/* --- General and Layout Styling --- */
+body {
+    background-color: #000;
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.home {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+.main h1 {
+    color: white;
+    font-size: 50px;
+    /* margin-top: 20px; */
+    width: 40ch;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.main h2 {
+    color: #27afe9;
+    font-size: 30px;
+    /* margin-top: 30px;
+     */
+    font-weight: 1000;
+}
+
+.text {
+    color: #00A3E7;
+}
+
+.section {
+    width: 100%;
+    margin-right: 100px;
+    font-size: 15px;
+    color: white;
+    margin-bottom: 20px;
+    animation: slideleft 1.5s forwards;
+}
+
+.section p {
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* --- Button Styling --- */
+.button {
+    position: relative;
+    padding: 10px 42px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #00A3E7;
+    transition: all 0.2s ease;
+    animation: slideleft 1.5s forwards;
+}
+
+.button:active {
+    transform: scale(0.96);
+}
+
+.button:before,
+.button:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+}
+
+/* --- Button Hover Effects --- */
+.button:hover:before {
+    top: -70%;
+    background-image: radial-gradient(circle, #00A3E7 20%, transparent 20%),
+        radial-gradient(circle, transparent 20%, #00A3E7 20%, transparent 30%),
+        radial-gradient(circle, #00A3E7 20%, transparent 20%),
+        radial-gradient(circle, #00A3E7 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #00A3E7 15%, transparent 20%),
+        radial-gradient(circle, #00A3E7 20%, transparent 20%),
+        radial-gradient(circle, #00A3E7 20%, transparent 20%),
+        radial-gradient(circle, #00A3E7 20%, transparent 20%),
+        radial-gradient(circle, #00A3E7 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+    background-position: 50% 120%;
+    animation: greentopBubbles 0.6s ease;
+}
+
+.button:hover::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #00A3E7 20%, transparent 20%),
+        radial-gradient(circle, #00A3E7 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #00A3E7 15%, transparent 20%),
+        radial-gradient(circle, #00A3E7 20%, transparent 20%),
+        radial-gradient(circle, #00A3E7 20%, transparent 20%),
+        radial-gradient(circle, #00A3E7 20%, transparent 20%),
+        radial-gradient(circle, #00A3E7 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 50% 0%;
+    animation: greenbottomBubbles 0.6s ease;
+}
+
+/* --- Social Card Styling --- */
+.card {
+    width: fit-content;
+    height: fit-content;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+    animation: slidebottom 0.7s forwards;
+}
+
+.socialContainer {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 0 4px 30px rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 0.3s;
+}
+
+/* Instagram */
+.containerOne:hover {
+    background-color: #d62976;
+}
+
+/* Twitter */
+.containerTwo:hover {
+    background-color: #00acee;
+}
+
+/* LinkedIn */
+.containerThree:hover {
+    background-color: #0072b1;
+}
+
+/* Whatsapp */
+.containerFour:hover {
+    background-color: green;
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+}
+
+.socialSvg {
+    width: 17px;
+}
+
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+
+/* --- Advanced Image Section --- */
+.image-section {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 40%;
+    max-width: 500px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(0, 163, 231, 0.15));
+    border-radius: 40% 40% 20% 20%;
+    box-shadow: 0 12px 30px rgba(0, 163, 231, 0.35), 0 6px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 6px 8px rgba(0, 163, 231, 0.5));
+    animation: fadeSlideUp 1.2s ease-out forwards;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.image-section:hover img {
+    transform: scale(1.05) rotate(-1deg);
+    filter: drop-shadow(0 0 15px rgba(0, 163, 231, 0.6));
+}
+
+/* --- Animations --- */
+@keyframes greentopBubbles {
+    /* same as before */
+}
+
+@keyframes greenbottomBubbles {
+    /* same as before */
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideleft {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slidebottom {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* --- Media Queries --- */
+@media screen and (max-width: 1130px) {
+    .home {
+        height: auto;
+        padding-top: 50px;
+        flex-direction: column;
+    }
+
+    .main-container {
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .main,
+    .section,
+    .button,
+    .card {
+        margin-left: 0;
+        animation: none;
+    }
+
+    .section {
+        margin-right: 0;
+    }
+
+    .main h1,
+    .main h2,
+    .section p {
+        text-align: center;
+    }
+
+    .card {
+        margin-top: 30px;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .image-section {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        margin: 2rem auto;
+        width: 80%;
+        max-width: 400px;
+        order: -1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main h1 {
+        font-size: 32px;
+        width: auto;
+        text-wrap: wrap;
+    }
+
+    .main h2 {
+        font-size: 24px;
+    }
+
+    .section p {
+        font-size: 14px;
+    }
+
+    .button {
+        font-size: 18px;
+        padding: 8px 30px;
+        margin: 0 auto;
+    }
+
+    .main-container {
+        padding: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main {
+        padding-top: 50px;
+    }
+
+    .main h1 {
+        font-size: 28px;
+    }
+
+    .main h2 {
+        font-size: 20px;
+    }
+
+    .section p {
+        font-size: 13px;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 8px 25px;
+    }
+
+    .card {
+        gap: 15px;
+    }
+}
+
+:root {
+    --accent: #00A3E7;
+    --card-bg: rgba(10, 14, 22, 0.88);
+}
+
+/* Wrapper that controls position & responsive width */
+.image-section {
+    position: absolute;
+    top: 50%;
+    right: 4%;
+    transform: translateY(-50%);
+    width: clamp(220px, 34vw, 480px);
+    /* responsive */
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    pointer-events: auto;
+}
+
+/* Frame holds the image and gives background / radius / glow */
+.image-frame {
+    width: 100%;
+    aspect-ratio: 4/5;
+    /* portrait-friendly box */
+    max-height: 72vh;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(0, 0, 0, 0.45));
+    border-radius: 26px;
+    padding: 10px;
+    /* inner padding for subtle border */
+    box-shadow: 0 20px 45px rgba(0, 163, 231, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.02);
+    overflow: hidden;
+    position: relative;
+}
+
+/* subtle decorative glow (non-intrusive) */
+.image-frame::before {
+    content: "";
+    position: absolute;
+    inset: -20%;
+    background: radial-gradient(circle at 10% 10%, rgba(124, 58, 237, 0.06), transparent 10%),
+        radial-gradient(circle at 90% 90%, rgba(0, 163, 231, 0.05), transparent 12%);
+    filter: blur(22px);
+    pointer-events: none;
+}
+
+/* Actual image — use contain so PNGs don't stretch or get cropped */
+.image-frame .portrait {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* key: keeps whole PNG visible */
+    object-position: 50% 48%;
+    display: block;
+    border-radius: 18px;
+    /* remove or lower for sharper PNG edges */
+    transition: transform .45s ease, filter .35s ease;
+    will-change: transform, filter;
+}
+
+/* Hover / focus effect (only for pointer devices) */
+@media (hover: hover) and (pointer: fine) {
+    .image-section:hover .image-frame {
+        transform: translateY(-6px) scale(1.01);
+    }
+
+    .image-section:hover .portrait {
+        transform: scale(1.03) rotate(-0.6deg);
+        filter: drop-shadow(0 10px 28px rgba(0, 163, 231, 0.16));
+    }
+}
+
+/* Circle avatar modifier */
+.image-frame--circle {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    padding: 8px;
+}
+
+.image-frame--circle .portrait {
+    border-radius: 50%;
+}
+
+/* Transparent-background PNG variant: keep frame subtle or remove background */
+.image-frame--transparent {
+    background: transparent;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.55);
+}
+
+.image-frame--transparent::before {
+    display: none;
+}
+
+/* Mobile / smaller screens — put image inline & smaller */
+@media screen and (max-width: 1130px) {
+    .image-section {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        margin: 2rem auto;
+        width: clamp(220px, 60vw, 420px);
+        order: -1;
+    }
+
+    .image-frame {
+        max-height: none;
+        aspect-ratio: 3/4;
+        border-radius: 20px;
+    }
+}
+
+/* Extra small */
+@media screen and (max-width: 480px) {
+    .image-section {
+        width: 82%;
+    }
+
+    .image-frame {
+        border-radius: 14px;
+        padding: 8px;
+    }
+
+    .image-frame .portrait {
+        border-radius: 12px;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    .image-section,
+    .image-frame,
+    .image-frame .portrait {
+        transition: none !important;
+        transform: none !important;
+        animation: none !important;
+    }
+}
+
+.tex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.main h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section p {
+    font-size: 20px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.card {
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+/* --- Media Queries --- */
+
+/* For screens up to 1130px (e.g., small laptops, large tablets) */
+/* --- Responsive Media Queries --- */
+
+/* For screens up to 1130px (medium desktops & laptops) */
+@media screen and (max-width: 1130px) {
+    .home {
+        height: 60vh;
+        padding-top: 50px;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .main-container {
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .main h1,
+    .main h2,
+    .section p {
+        text-align: center;
+        margin: 0;
+    }
+
+    .section {
+        margin: 0;
+        animation: none;
+    }
+
+    .button,
+    .card {
+        margin: 0 auto;
+    }
+
+    .card {
+        margin-top: 30px;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .image-section {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        margin: 2rem auto;
+        width: clamp(220px, 60vw, 420px);
+        order: -1; /* Image on top */
+    }
+
+    .image-frame {
+        max-height: none;
+        aspect-ratio: 3/4;
+        border-radius: 20px;
+    }
+}
+
+/* For screens up to 768px (tablets) */
+@media screen and (max-width: 768px) {
+    .main h1 {
+        font-size: 32px;
+        width: auto;
+        text-wrap: wrap;
+    }
+
+    .main h2 {
+        font-size: 24px;
+    }
+
+    .section p {
+        font-size: 14px;
+    }
+
+    .button {
+        font-size: 18px;
+        padding: 8px 30px;
+    }
+
+    .main-container {
+        padding: 1rem 0;
+    }
+}
+
+/* For screens up to 480px (mobile phones) */
+@media screen and (max-width: 480px) {
+    .main {
+        padding-top: 50px;
+    }
+
+    .main h1 {
+        font-size: 28px;
+    }
+
+    .main h2 {
+        font-size: 20px;
+    }
+
+    .section p {
+        font-size: 13px;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 8px 25px;
+    }
+
+    .card {
+        gap: 15px;
+    }
+
+    .image-section {
+        width: 82%;
+    }
+
+    .image-frame {
+        border-radius: 14px;
+        padding: 8px;
+    }
+
+    .image-frame .portrait {
+        border-radius: 12px;
+    }
+}
+
+/* For large desktops */
+@media screen and (min-width: 1366px) {
+    .home {
+        margin-top: 100px;
+    }
+}

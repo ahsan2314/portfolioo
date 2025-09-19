@@ -1,0 +1,247 @@
+/* General layout */
+.main {
+  height: auto;
+  width: 100%;
+}
+
+.reveal-section {
+  background: #081C29;
+  color: #eee;
+  padding: 100px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-heading {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  width: auto;
+}
+
+.section-heading span {
+  color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-desc {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  font-size: 17px;
+}
+.main {
+  height: auto;
+  width: 100%;
+}
+
+.reveal-section {
+  background: #081C29;
+  color: #eee;
+  padding: 100px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-heading {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  width: auto;
+}
+
+.section-heading span {
+  color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+.head span {
+  color: #00A3E7;
+}
+
+.section-desc {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  font-size: 17px;
+}
+/* Grid layout for features */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 120px;
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Individual feature box */
+.feature-box {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 3px 12px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+/* Reveal animation class */
+.feature-box.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hover effects */
+.feature-box:hover {
+  transform: scale(1.05);
+}
+.feature-box:hover i {
+  color: #fff;
+}
+
+/* Feature box content */
+.feature-box i {
+  font-size: 20px;
+  color: #00A3E7;
+  margin-bottom: 20px;
+}
+
+.feature-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.feature-box p {
+  font-size: 17px;
+  color: white;
+  line-height: 1.6;
+}
+
+/* Scroll reveal animation (optional JS required) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s, transform 1s;
+}
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive breakpoints */
+@media screen and (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .section-heading {
+    font-size: 24px;
+  }
+  .section-desc {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+  .feature-box i {
+    font-size: 35px;
+  }
+  .feature-box h3 {
+    font-size: 18px;
+  }
+  .feature-box p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .reveal-section {
+    padding: 60px 20px;
+  }
+  .section-heading {
+    font-size: 15px;
+  }
+  .section-desc {
+    font-size: 15px;
+  }
+  .features-grid {
+    gap: 20px;
+  }
+  .feature-box {
+    padding: 20px 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .section-heading {
+    font-size: 18px;
+  }
+  .section-desc {
+    font-size: 14px;
+  }
+  .feature-box i {
+    font-size: 30px;
+  }
+  .feature-box h3 {
+    font-size: 16px;
+  }
+  .feature-box p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .section-heading {
+    font-size: 18px;
+  }
+  .section-desc {
+    font-size: 14px;
+  }
+  .feature-box i {
+    font-size: 30px;
+  }
+  .feature-box h3 {
+    font-size: 16px;
+  }
+  .feature-box p {
+    font-size: 14px;
+  }
+}
