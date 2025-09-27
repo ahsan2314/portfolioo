@@ -22,5 +22,6 @@ export class ContactComponent {
     elements.email.value = '';
     elements.message.value = '';
   }
+  gmail = "@";
 
 }
