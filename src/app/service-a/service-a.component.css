@@ -210,6 +210,9 @@
   .feature-box {
     padding: 20px 10px;
   }
+  .feature-box i {
+    font-size: 30px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -228,6 +231,10 @@
   .feature-box p {
     font-size: 14px;
   }
+  .head {
+    font-size: 16px;
+    padding-top: 8px;
+  }
 }
 @media screen and (max-width: 400px) {
   .section-heading {
@@ -244,5 +251,9 @@
   }
   .feature-box p {
     font-size: 14px;
+  }
+  .head {
+    font-size: 16px;
+    padding-top: 8px;
   }
 }
