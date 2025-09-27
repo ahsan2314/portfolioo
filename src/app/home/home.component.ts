@@ -15,7 +15,7 @@ import { EducationComponent } from '../education/education.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule,RouterModule,AboutAComponent,ServiceComponent,SkillsComponent,PortfolioComponent,FooterComponent,ContactComponent,EducationComponent],
+  imports: [CommonModule,RouterModule,AboutComponent,ServiceComponent,SkillsComponent,PortfolioComponent,FooterComponent,ContactComponent,EducationComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

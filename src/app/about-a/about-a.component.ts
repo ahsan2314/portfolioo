@@ -7,7 +7,7 @@ import { NgIf } from '@angular/common';
 @Component({
   selector: 'app-about-a',
   standalone: true,
-  imports: [RouterModule,FooterComponent,NgIf],
+  imports: [RouterModule,FooterComponent],
   templateUrl: './about-a.component.html',
   styleUrl: './about-a.component.css'
 })
