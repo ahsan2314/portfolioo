@@ -31,4 +31,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     const typed = new Typed(".text", this.options);
   }
+  downloadResume() {
+  const link = document.createElement('a');
+  link.href = 'assets/me.pdf'; // file ka path
+  link.download = 'Ahsan-Akhtar-Resume.pdf'; // file ka naam
+  link.click(); 
+}
 }

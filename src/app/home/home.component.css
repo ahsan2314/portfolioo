@@ -687,3 +687,56 @@ body {
         margin-top: 100px;
     }
 }
+.download-btn {
+  position: relative;
+  display: inline-flex;
+  display: block;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #0077ff, #00d4ff);
+  color: white;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  margin: 0 auto;
+  justify-content: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover Animation */
+.download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 153, 255, 0.35);
+}
+
+/* Ripple Effect Background on Hover */
+.download-btn::before {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.35);
+  height: 200%;
+  width: 200%;
+  top: -50%;
+  left: -50%;
+  transform: scale(0);
+  border-radius: 50%;
+  transition: transform 0.45s ease;
+}
+
+.download-btn:hover::before {
+  transform: scale(1);
+}
+
+/* Icon Animation */
+.download-btn i {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.download-btn:hover i {
+  transform: translateY(3px);
+}
